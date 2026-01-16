@@ -1,0 +1,43 @@
+{
+  "name": "flxdb",
+  "version": "1.0.2",
+  "description": "A lightweight, fast and persistent key-value database for Node.js using file-based JSON storage.",
+  "keywords": [
+    "flxdb",
+    "database",
+    "key-value",
+    "kv",
+    "json",
+    "storage",
+    "localdb",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/lewiradev/flxdb#readme",
+  "bugs": {
+    "url": "https://github.com/lewiradev/flxdb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewiradev/flxdb.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "lewiradev",
+    "url": "https://github.com/lewiradev"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
