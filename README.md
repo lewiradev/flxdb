@@ -6,13 +6,13 @@
   <a href="https://www.npmjs.com/package/flxdb">
     <img src="https://img.shields.io/npm/dm/flxdb?color=%230098ee&style=for-the-badge" alt="npm downloads" />
   </a>
-  <a href="https://github.com/lewirawashere/flxdb">
-    <img src="https://img.shields.io/github/stars/lewirawashere/flxdb?color=%23ffca28&style=for-the-badge" alt="stars" />
+  <a href="https://github.com/lewiradev/flxdb">
+    <img src="https://img.shields.io/github/stars/lewiradev/flxdb?color=%23ffca28&style=for-the-badge" alt="stars" />
   </a>
-  <a href="https://github.com/lewirawashere/flxdb/issues">
-    <img src="https://img.shields.io/github/issues/lewirawashere/flxdb?color=%23e57373&style=for-the-badge" alt="issues" />
+  <a href="https://github.com/lewiradev/flxdb/issues">
+    <img src="https://img.shields.io/github/issues/lewiradev/flxdb?color=%23e57373&style=for-the-badge" alt="issues" />
   </a>
-  <a href="https://github.com/lewirawashere/flxdb/blob/main/LICENSE">
+  <a href="https://github.com/lewiradev/flxdb/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/flxdb?color=%23796eff&style=for-the-badge" alt="license" />
   </a>
 </p>
