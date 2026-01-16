@@ -166,7 +166,7 @@ db.set({
 
 const config = db.get("server.port");
 ```
-```html
+
 <p align="left">
   <a href="https://www.npmjs.com/package/flxdb">
     <img src="https://img.shields.io/npm/v/flxdb?color=%2300c853&style=for-the-badge" alt="npm version" />
@@ -184,4 +184,4 @@ const config = db.get("server.port");
     <img src="https://img.shields.io/npm/l/flxdb?color=%23796eff&style=for-the-badge" alt="license" />
   </a>
 </p>
-```
+
