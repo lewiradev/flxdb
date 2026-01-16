@@ -1,4 +1,4 @@
-# flxdb
+# 📁 flxdb  
 <p align="left">
   <a href="https://www.npmjs.com/package/flxdb">
     <img src="https://img.shields.io/npm/v/flxdb?color=%2300c853&style=for-the-badge" alt="npm version" />
@@ -18,14 +18,14 @@
 </p>
 
 **flxdb**, modern Node.js projeleri için tasarlanmış  
-**hafif, hızlı ve dosya tabanlı** bir **key-value (KV) veritabanıdır**.
+hafif, hızlı ve dosya tabanlı bir **key-value (KV) veritabanıdır**.
 
-- Zero-configuration  
-- Persistent JSON storage  
-- Dot-notation key paths (`settings.app.theme`)  
-- Lightweight and minimal  
-- Ready-to-use single instance (`require("flxdb")`)  
-- Extended utility methods for common data operations  
+✔ Zero‑configuration  
+✔ Persistent JSON storage  
+✔ Dot‑notation key paths  
+✔ Extremely lightweight  
+✔ Synchronous & stable  
+✔ Single ready‑to‑use instance  
 
 ---
 
@@ -34,11 +34,11 @@
 ```bash
 npm install flxdb
 ```
-📁 Automatic Storage Structure
-flxdb automatically creates the following directory on first use:
 
+---
 
-🚀 Quick Usage Example
+## 🚀 Quick Example
+
 ```js
 const db = require("flxdb");
 
@@ -46,140 +46,170 @@ db.set("user.name", "Lewira");
 db.add("system.uptime", 1);
 
 console.log(db.get("user.name"));  // "Lewira"
-console.log(db.all());             // full data object
+console.log(db.all());             // full database object
 ```
-🔧 Features
-Simple and intuitive key-value API
-Automatic JSON-based persistence
-Deep merging via set(object)
-Dot-notation support
-Utility helpers for arrays, numbers, type checking, and more
-Flattened key listing, prefix scanning, and value extraction
-Fully synchronous for simplicity and reliability
 
-🧩 API Reference
-Core Methods
-set(key, value)
-Stores a value at the specified key.
+---
 
+## 🔧 Features
+
+- Intuitive key‑value API  
+- Automatic persistent JSON storage  
+- Dot-notation deep operations  
+- Array & number helpers  
+- Object merge with `set(object)`  
+- Flattened key listing, prefix scanning  
+- Fully synchronous for reliability  
+
+---
+
+## 🧩 API Reference
+
+### ⭐ Core Methods
+
+#### `set(key, value)`
 ```js
 db.set("app.theme", "dark");
 db.set("user.profile.age", 24);
-set(object)
-
-Merges an entire object into the database.
 ```
 
+#### `set(object)`
 ```js
 db.set({
   app: { version: "1.0.0" },
   cache: { enabled: true }
 });
-get(key, defaultValue?)
-
-Retrieves a stored value.
 ```
+
+#### `get(key, defaultValue?)`
 ```js
 const version = db.get("app.version", "0.0.0");
-fetch(key)
-Alias of get().
-
-has(key)
-
-Checks whether a key exists.
 ```
 
+#### `fetch(key)`
+Alias of `get()`.
+
+#### `has(key)`
 ```js
 db.has("cache.enabled"); // true / false
-ensure(key, defaultValue)
-
-Ensures the key exists; otherwise sets and returns the default value.
 ```
+
+#### `ensure(key, defaultValue)`
 ```js
 const port = db.ensure("server.port", 8080);
-delete(key)
-
-Removes a key from the database.
 ```
+
+#### `delete(key)`
 ```js
 db.delete("user.session");
-deleteAll()
+```
 
+#### `deleteAll()`
 Clears the entire database.
 
-Numeric Operations
-add(key, amount)
-Increments a numeric value.
-```
+---
+
+### 🔢 Numeric Operations
+
+#### `add(key, amount)`
 ```js
 db.add("metrics.requests", 1);
-subtract(key, amount)
-Decrements a numeric value.
 ```
+
+#### `subtract(key, amount)`
 ```js
 db.subtract("metrics.tasks", 2);
-Array Operations
-push(key, value)
-Adds a value to an array.
-If the key is not an array, it will be converted into one.
 ```
+
+---
+
+### 🧺 Array Operations
+
+#### `push(key, value)`
 ```js
 db.push("logs", { type: "start", at: Date.now() });
-pull(key, value)
-Removes matching items from an array.
 ```
+
+#### `pull(key, value)`
 ```js
 db.pull("tags", "deprecated");
-Data & Key Listing
-all()
-Returns the entire database as a deep-cloned object.
-
-allArray()
-Returns all entries as an array of { key, value }.
 ```
+
+---
+
+### 📚 Data & Key Listing
+
+#### `all()`
+Returns full database.
+
+#### `allArray()`
 ```js
 const entries = db.allArray();
-keys(prefix?)
-Returns all stored keys.
-Optionally filters for keys starting with a prefix.
 ```
+
+#### `keys(prefix?)`
 ```js
-db.keys();          // all keys
-db.keys("user.");   // keys starting with user.
-startsWith(prefix)
-Returns an array of { key, value } where the key starts with the prefix.
+db.keys();        // all keys
+db.keys("user."); // starts with "user."
 ```
+
+#### `startsWith(prefix)`
 ```js
 db.startsWith("cache.");
-Type Checking
-type(key)
-Returns the type of the stored value.
 ```
+
+---
+
+### 🧪 Type Checking
+
+#### `type(key)`
 ```js
-db.type("user.profile"); // "object", "string", "number", "array", etc.
-Storage Behavior
-All values are saved to flxdb/flxdb.json
-Writes are automatically persisted
-Keys may be nested via dot-notation
-Deep merge supported for object writes
-Fully synchronous for safe usage in small-to-medium projects
+db.type("user.profile"); // object, string, number, etc.
 ```
-🛠 Suitable For
-Small configuration storage
-Local persistence in CLI tools
-Lightweight state management
-JSON-based caching
-Counters, logs, metrics
-Local project data files
-Simple key-value data utilities
 
+---
 
-🧪 Example: Structured Configuration
+## 🗄 Storage Behavior
+
+- All data saved to `flxdb/flxdb.json`  
+- Writes are fully persisted  
+- Supports nested dot‑notation  
+- Deep merge support  
+- Synchronous & stable for small/medium Node.js apps  
+
+---
+
+## 🛠 Suitable For
+
+- App configuration  
+- CLI tool storage  
+- Local persistence  
+- JSON-based caching  
+- Metrics & counters  
+- Lightweight data utilities  
+
+---
+
+## 🧪 Example: Structured Config
+
 ```js
 db.set({
   server: { port: 3000, secure: false },
   app: { mode: "production", version: "1.2.0" }
 });
 
-const config = db.get("server.port");
+const port = db.get("server.port");
 ```
+
+---
+
+## ⭐ Support
+
+Projeyi beğendiysen bir ⭐ bırakabilirsin!  
+Her türlü katkı ve öneri kabul edilir.
+
+---
+
+## 📄 License
+
+MIT License
