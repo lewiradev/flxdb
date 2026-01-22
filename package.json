@@ -1,0 +1,49 @@
+{
+  "name": "flxdb",
+  "version": "1.1.0",
+  "description": "A lightweight, fast and persistent key-value database for Node.js with namespaces, TTL and JSON schema validation.",
+  "keywords": [
+    "flxdb",
+    "database",
+    "key-value",
+    "kv",
+    "json",
+    "storage",
+    "lightweight-db",
+    "localdb",
+    "nodejs",
+    "ttl",
+    "schema-validation",
+    "namespaces",
+    "json-db",
+    "file-database"
+  ],
+  "homepage": "https://github.com/lewiradev/flxdb#readme",
+  "bugs": {
+    "url": "https://github.com/lewiradev/flxdb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewiradev/flxdb.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "lewiradev",
+    "url": "https://github.com/lewiradev"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
